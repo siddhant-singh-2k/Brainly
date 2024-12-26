@@ -25,7 +25,7 @@ app.get('/api/v1/signup', function (req, res) {
             res.json("User Signed up");
         }
         catch (e) {
-            console.log(e);
+            res.status(411).json("User already exists");
         }
     });
 });
