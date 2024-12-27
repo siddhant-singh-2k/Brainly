@@ -6,7 +6,7 @@ import express from "express";
 const app = express();
 app.use(express.json());
 
-
+//Signup endpoint
 
 app.get('/api/v1/signup',async function (req,res) {
     const username = req.body.username;
@@ -20,7 +20,11 @@ app.get('/api/v1/signup',async function (req,res) {
     }
 })
 
+
 app.get('/api/v1/signin',function (req,res) {
+    const link = req.body.link;
+    const type = req.body.type;
+    
 
 })
 app.get('/api/v1/content',function (req,res) {
